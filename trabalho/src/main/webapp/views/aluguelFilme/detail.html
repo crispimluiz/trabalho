@@ -1,0 +1,16 @@
+<header ng-switch on="$location.path().indexOf('/aluguelFilmes/new') > -1">
+    <h3 ng-switch-when="true">Create a new aluguelFilme</h3>
+    <h3 ng-switch-when="false">View or edit aluguelFilme</h3>
+</header>
+<form id="aluguelFilmeForm" name="aluguelFilmeForm" class="form-horizontal" role="form">
+    
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="savealuguelFilme" name="savealuguelFilme" class="btn btn-primary" ng-disabled="isClean() || aluguelFilmeForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Save</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</button>
+            <button id="deletealuguelFilme" name="deletealuguelFilme" class="btn btn-danger" ng-show="aluguelFilme.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+    </div>
+</form>
