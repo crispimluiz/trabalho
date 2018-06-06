@@ -1,12 +1,12 @@
 package br.com.iftm.trabalho.model;
 
-import javax.persistence.Entity;
 import java.io.Serializable;
-import javax.persistence.Id;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Column;
-import javax.persistence.Version;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -16,11 +16,8 @@ public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "COD_CLIENTE")
 	private Integer id;
-	
-	@Version
-	@Column(name = "version")
-	private int version;
 	
 	@Column(name = "NOME_CLI")
 	private String nomeCli;
@@ -34,14 +31,6 @@ public class Cliente implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public int getVersion() {
-		return this.version;
-	}
-
-	public void setVersion(final int version) {
-		this.version = version;
 	}
 	
 	public String getNomeCli() {

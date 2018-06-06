@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Version;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -19,11 +18,9 @@ public class AluguelFilme implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "COD_ALUGUELFILME")
 	private Long id;
-	
-	@Version
-	@Column(name = "version")
-	private int version;
+
 	@ManyToOne
 	@JoinColumn(name = "COD_CLIENTE",nullable=false)
 	private Cliente cliente;
@@ -39,14 +36,6 @@ public class AluguelFilme implements Serializable {
 		this.id = id;
 	}
 
-	public int getVersion() {
-		return this.version;
-	}
-
-	public void setVersion(final int version) {
-		this.version = version;
-	}
-	
 	public Cliente getCliente() {
 		return cliente;
 	}
