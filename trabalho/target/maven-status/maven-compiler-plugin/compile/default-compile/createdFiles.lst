@@ -1,0 +1,13 @@
+br\com\iftm\trabalho\facade\rs\RestApplication.class
+br\com\iftm\trabalho\model\Cliente.class
+br\com\iftm\trabalho\facade\ws\FilmeFacade.class
+br\com\iftm\trabalho\dao\FilmeDAO.class
+br\com\iftm\trabalho\facade\rs\AluguelFilmeFacade.class
+br\com\iftm\trabalho\model\AluguelFilme.class
+br\com\iftm\trabalho\facade\ws\ClienteFacade.class
+br\com\iftm\trabalho\dao\AluguelFilmeDAO.class
+br\com\iftm\trabalho\facade\ws\AluguelFilmeFacade.class
+br\com\iftm\trabalho\facade\rs\FilmeFacade.class
+br\com\iftm\trabalho\dao\ClienteDAO.class
+br\com\iftm\trabalho\facade\rs\ClienteFacade.class
+br\com\iftm\trabalho\model\Filme.class
